@@ -27,7 +27,6 @@ class Game:
                 print("Only between 1 and 9")
                 self.playerInput()
         except:
-            print("Only Integer Inputs")
             self.playerInput()
 
     def setValue(self,pos):
@@ -69,8 +68,11 @@ class Game:
             print("Winner is O")
             q = input()
             exit() 
-  
-
+        
+        if ' ' not in board:
+            print("Tie")
+            q = input()
+            exit()
 
 
 myGame=Game()
